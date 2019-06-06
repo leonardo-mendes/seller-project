@@ -1,4 +1,4 @@
-package com.sellerphone.phoneservice.model;
+package com.sellerphone.phoneservice.controller.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,14 +10,10 @@ import java.io.Serializable;
 
 @Builder
 @Data
-@Entity
-@Table(name = "phone")
 @AllArgsConstructor
 @NoArgsConstructor
-public class PhoneEntity {
+public class PhoneRequest implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String model;
     private String brand;

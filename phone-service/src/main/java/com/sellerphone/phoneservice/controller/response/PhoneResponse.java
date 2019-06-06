@@ -1,23 +1,18 @@
-package com.sellerphone.phoneservice.model;
+package com.sellerphone.phoneservice.controller.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 @Builder
 @Data
-@Entity
-@Table(name = "phone")
 @AllArgsConstructor
 @NoArgsConstructor
-public class PhoneEntity {
+public class PhoneResponse implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String model;
     private String brand;
