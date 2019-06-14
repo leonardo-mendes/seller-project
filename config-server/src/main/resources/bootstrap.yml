@@ -1,0 +1,52 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    host: rabbitmq-srm
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: phoneservice
+          uri: https://github.com/leonardo-mendes/seller-project-config
+#          username: username
+#          password: password
+          ignoreLocalSshSettings: true
+          hostKey: someHostKey
+          hostKeyAlgorithm: ssh-rsa
+          privateKey: -----BEGIN RSA PRIVATE KEY-----
+            P0y5seifqdpdLa0DG+QWZxggCQIKwqPO9Iu+b7/2mQI6oeZWha7CPizZCcHFfy+p
+            gWP4cIdRleXzrlWuq+xr8HzzpAxwstvmgmAFrMV/vinFvZQd168wQi3MUSKOIKbP
+            8VvtdCEiGf8HN6EzGW3/wYBN9zx4Zcwbp9kCI6e4x1p7GSrro6TLgzp5dHHlu7Ka
+            zyq/J1/3A5wAL/Jx1yiwkOkFsOfjHpYj70f8yTSd1LLePl/b8VGA0f9H6YBQsjRF
+            HYJsPdRo5rnB6ZGLgn4k7wQrK8CYdQLp0l1OQvkFxF4bBOW/X5nwrL3Kotq+qpua
+            EH+3LzN5/M7URKRnZ8zGj4cUG41OVKUmgVct+xCZwb6PSjR1qDhKlR+t8LQE2Sss
+            Bk2OVbFlS3HKpfAW5bXEuRGEih5tANEZ3+aKOAV3yZx8RJVhP+l3GzwUZAxVH66N
+            DxzHFrW5nc3sXm2lu8MGqdG4yJLnUxv9VPmKzQu4jPWdNAGsDh5UZ5YWOOVEIXcJ
+            Fp20iaZauyhvNZf/SECqjQULWoHl3pl5Sm0CwE62swhvaXld85t1q43a8OCeQD2u
+            KbYJRNygyR6+ErIWVANfY2Rah3JvxcDWgSW/rR1aFaYRF4aAeWQ5vPh6HlzdTA/W
+            QMVgrnUZ1hFedQ+UnA4kxM0+sokkP7kMNdIWEBMP9UCBRhlRdqRpfglMbpU+UoER
+            yk9POaMACFafsoH1d+nLt9/5Xp5hQ+rbjqcJnbXYuvvGiQJcT1dPa3kHlgc7Alx7
+            EHipTpEP5wKiR2jKPG829WTV1yMBZztuseLQPzeVUSK4u24pNPdDYvcf27tiO7Ss
+            WJKkCau7owY/gg20jSPniwR8EebmjHE5HbMhJXcxrjJu7z4ON02q3nB67hcAuM2S
+            WGXr+Mk4vGi4QvImG0JaEEpOc7zlF3Si1N5PGk7cBW+gHU0Yts6oKuqvPMzXSOJH
+            jeyUj6ECF9a5kyY94xeUO+bnd55CGEFo6JmVystiktrvBcVfU9lqfYgxeyycRMyw
+            14xIgDkgvA1ajRVu1Eg8Ym14nY+OFIjRWiXou7z0Gtx6MCe69hMeS6MtZU9Ic6Bp
+            ZQMIUa/egadqsTFnOW/W9UzzIXEi3tmXnjI9ExzqgPc1bS+bdziDTjspXqg1J2dd
+            amOHaEtHORXgLkZ3bDQU4VWDoWZG4Y4ArZcqLNSgBoo2z6XBq0JkIrOFS1tV7qKw
+            mdZlYNz1WM87SJVf15LezYpqQp1vkSS3wsmfgY0uFjOkJy87pYUnn7FOno6mEtGr
+            aVpizhfoYQplqzue7e/jpTv1+lXSCjWZHPeLQjr1afwBPAso46VgUTZPt4rLZuLu
+            PT6mG23TgSEA7dhJn70hNkwXMsJOvcgUqQAyMT/mjmggFcOVi/gslRfuerU8UMae
+            XAmT/XiVDwAWTICdmuqsJ7tIiN1WxA8l6KTQKtCtR6SGspzIAZNnwRtstg45Z+/y
+            v8DAHwzxGg0fhJWykagjLpNEHgpdE67FUdgDmr18W41WulBeyv3CXG+JiXeh8XyE
+            QcT31htabuMATOxFsY2iXC06xTpMdBPOtUkmL5PaV5YyO89ztbfdmtO9NUvbpq7Y
+            -----END RSA PRIVATE KEY-----
+
+encrypt:
+  key: '12313213'
+
