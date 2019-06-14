@@ -1,4 +1,3 @@
-/*
 package com.sellerphone.phoneservice.integration;
 
 import com.sellerphone.phoneservice.PhoneServiceApplication;
@@ -56,4 +55,3 @@ public class PhoneApiIntegrationTest {
     }
 
 }
-*/
