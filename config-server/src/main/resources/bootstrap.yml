@@ -12,7 +12,7 @@ spring:
     config:
       server:
         git:
-          search-paths: phoneservice
+          search-paths: phoneservice,storeservice
           uri: https://github.com/leonardo-mendes/seller-project-config
 #          username: username
 #          password: password
