@@ -43,6 +43,11 @@ public class PhoneService implements PhoneContract {
     }
 
     @Override
+    public PhoneResponse findPhoneByModel(String model) {
+        return phoneMapper.phoneEntityToPhoneResponse(phoneRepository.findByModel(model));
+    }
+
+    @Override
     public List<PhoneResponse> findPhonesByBrand(String brand) {
         return phoneRepository.findByBrand(brand).stream()
                 .map(phoneEntity -> phoneMapper.phoneEntityToPhoneResponse(phoneEntity))

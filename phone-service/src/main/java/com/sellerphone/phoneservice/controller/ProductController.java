@@ -23,16 +23,22 @@ public class ProductController {
         return phoneContract.findAll();
     }
 
-    @ApiOperation(value = "This endpoint will retrieve all phones on storage by brand.")
+    @ApiOperation(value = "This endpoint will retrieve a phone on storage by brand.")
     @GetMapping(value = "/brand/{brand}")
     public List<PhoneResponse> findAllByBrand(@PathVariable("brand") String brand) {
         return phoneContract.findPhonesByBrand(brand);
     }
 
     @GetMapping(value = "/{id}")
-    @ApiOperation(value = "This endpoint will retrieve a phones on storage by id.")
+    @ApiOperation(value = "This endpoint will retrieve a phone on storage by id.")
     public PhoneResponse findById(@PathVariable("id") Long id) {
         return phoneContract.findPhoneById(id);
+    }
+
+    @GetMapping(value = "model/{model}")
+    @ApiOperation(value = "This endpoint will retrieve a phone on storage by model.")
+    public PhoneResponse findByModel(@PathVariable("model") String model) {
+        return phoneContract.findPhoneByModel(model);
     }
 
     @PostMapping

@@ -11,4 +11,6 @@ public interface PhoneRepository extends PagingAndSortingRepository<PhoneEntity,
 
     List<PhoneEntity> findByBrand(String brand);
 
+    PhoneEntity findByModel(String model);
+
 }

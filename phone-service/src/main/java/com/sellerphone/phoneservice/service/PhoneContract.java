@@ -13,6 +13,8 @@ public interface PhoneContract {
 
     PhoneResponse findPhoneById(Long id);
 
+    PhoneResponse findPhoneByModel(String model);
+
     List<PhoneResponse> findPhonesByBrand(String brand);
 
     void deletePhone(Long id);

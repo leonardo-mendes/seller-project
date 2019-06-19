@@ -8,4 +8,4 @@ echo ">>>>>>>>>>>> Configuration Server has started"
 
 java -Dserver.port=$SERVER_PORT \
     -Dfile.encoding=UTF-8       \
-    -jar /usr/local/phone/@project.build.finalName@.jar
+    -jar /usr/local/store/@project.build.finalName@.jar
