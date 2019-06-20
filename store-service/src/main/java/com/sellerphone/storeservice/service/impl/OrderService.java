@@ -9,6 +9,7 @@ import com.sellerphone.storeservice.model.OrderEntity;
 import com.sellerphone.storeservice.repository.StoreRepository;
 import com.sellerphone.storeservice.service.StoreContract;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,10 +21,13 @@ import java.util.List;
 @Slf4j
 public class OrderService implements StoreContract {
 
+    @Autowired
     private PhoneServiceInterface phoneServiceInterface;
 
+    @Autowired
     private OrderMapper orderMapper;
 
+    @Autowired
     private StoreRepository storeRepository;
 
     @Override
@@ -47,12 +51,14 @@ public class OrderService implements StoreContract {
 
     @Override
     public OrderResponse findOrderById(Long id) {
-        return null;
+        return orderMapper.orderEntityToOrderResponse(
+                storeRepository.findById(id).get()
+        );
     }
 
     @Override
     public void deleteOrder(Long id) {
-
+        storeRepository.delete(storeRepository.findById(id).get());
     }
 
 }
